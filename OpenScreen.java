@@ -15,64 +15,67 @@ public class OpenScreen extends JPanel implements ActionListener {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Background grid = new Background();
+        
         OpenScreen grid2 = new OpenScreen();
         JFrame jf = new JFrame("Practice");
 
         jf.setSize(800, 700);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        jf.add(grid);
-        //jf.setVisible(true);
-
+       
         JButton gMode = new JButton("G Mode");
-        //gMode.setVisible(true);
         gMode.setText("G MODE");
-        gMode.setBounds(250, 100, 250, 60);
+        gMode.setBounds(300, 50, 200, 60);
         gMode.setVisible(true);
         jf.add(gMode);
 
         JButton easy = new JButton("Easy");
-        //easy.setVisible(true);
         easy.setText("EASY");
-        easy.setBounds(250, 200, 250, 60);
+        easy.setBounds(300, 150, 200, 60);
         easy.setVisible(true);
         jf.add(easy);
 
         JButton medium = new JButton("Medium");
-        //medium.setVisible(true);
         medium.setText("MEDIUM");
-        medium.setBounds(250, 300, 250, 60);
+        medium.setBounds(300, 250, 200, 60);
         medium.setVisible(true);
         jf.add(medium);
 
         JButton hard = new JButton("Hard");
-        // hard.setVisible(true);
         hard.setText("HARD");
-        hard.setBounds(250, 400, 250, 60);
+        hard.setBounds(300, 350, 200, 60);
         hard.setVisible(true);
         jf.add(hard);
 
         JButton carlos = new JButton("Carlos");
-        //carlos.setVisible(true);
         carlos.setText("CARLOS");
-        carlos.setBounds(250, 500, 250, 60);
+        carlos.setBounds(300, 450, 200, 60);
         carlos.setVisible(true);
         jf.add(carlos);
+       
 
-        jf.getContentPane().setBackground(new Color(75, 70, 70));
-        
         jf.add(gMode);
         jf.add(easy);
         jf.add(medium);
         jf.add(hard);
         jf.add(carlos);
         jf.add(grid2);
+
         jf.setVisible(true);
 
         gMode.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Option chosen: G Mode \n");
+                gMode.setVisible(false);
+                jf.remove(gMode);
+                easy.setVisible(false);
+                jf.remove(easy);
+                medium.setVisible(false);
+                jf.remove(medium);
+                hard.setVisible(false);
+                jf.remove(hard);
+                carlos.setVisible(false);
+                jf.remove(carlos);
             }
         });
 
@@ -80,18 +83,48 @@ public class OpenScreen extends JPanel implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Option chosen: Easy \n");
+                gMode.setVisible(false);
+                jf.remove(gMode);
+                easy.setVisible(false);
+                jf.remove(easy);
+                medium.setVisible(false);
+                jf.remove(medium);
+                hard.setVisible(false);
+                jf.remove(hard);
+                carlos.setVisible(false);
+                jf.remove(carlos);
             }
         });
         medium.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Option chosen: Medium \n");
+                gMode.setVisible(false);
+                jf.remove(gMode);
+                easy.setVisible(false);
+                jf.remove(easy);
+                medium.setVisible(false);
+                jf.remove(medium);
+                hard.setVisible(false);
+                jf.remove(hard);
+                carlos.setVisible(false);
+                jf.remove(carlos);
             }
         });
         hard.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Option chosen: Hard \n");
+                gMode.setVisible(false);
+                jf.remove(gMode);
+                easy.setVisible(false);
+                jf.remove(easy);
+                medium.setVisible(false);
+                jf.remove(medium);
+                hard.setVisible(false);
+                jf.remove(hard);
+                carlos.setVisible(false);
+                jf.remove(carlos);
             }
         });
 
@@ -99,6 +132,16 @@ public class OpenScreen extends JPanel implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Option chosen: Carlos \n");
+                gMode.setVisible(false);
+                jf.remove(gMode);
+                easy.setVisible(false);
+                jf.remove(easy);
+                medium.setVisible(false);
+                jf.remove(medium);
+                hard.setVisible(false);
+                jf.remove(hard);
+                carlos.setVisible(false);
+                jf.remove(carlos);
             }
         });
 
@@ -126,8 +169,8 @@ public class OpenScreen extends JPanel implements ActionListener {
 
             }
             y = w * 30;
+
         }
-        repaint();
     }
 
 }
